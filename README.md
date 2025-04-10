@@ -9,7 +9,7 @@ You must create a Connected App for your Agentforce Agent(s) to use it with this
 ## Installation
 
 ```bash
-pip install agentforce
+pip install salesforce-agentforce
 ```
 
 ## Usage
