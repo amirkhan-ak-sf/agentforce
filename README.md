@@ -15,7 +15,7 @@ pip install agentforce
 ## Usage
 
 ```python
-from agentforce import Agentforce
+from agentforce.agents import Agentforce
 
 # Initialize the client
 agentforce = Agentforce()

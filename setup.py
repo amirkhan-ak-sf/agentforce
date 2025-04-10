@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="salesforce-agentforce",
-    version="0.1.0",
+    version="0.1.5",
     author="Amir Khan",
     author_email="amir.khan@salesforce.com",
     description="A Python SDK for interacting with the Agentforce Agents",
