@@ -2,6 +2,10 @@
 
 A Python SDK for interacting with the Agentforce API.
 
+## Connected app
+You must create a Connected App for your Agentforce Agent(s) to use it with this SDK. Here are the instructions: https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html
+
+
 ## Installation
 
 ```bash

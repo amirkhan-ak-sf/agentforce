@@ -1,17 +1,31 @@
+import os
 from agentforce.agents import Agentforce
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Initialize the Agentforce client
+client = Agentforce()
+
+# Get credentials from environment variables
+salesforce_org = os.getenv("SF_ORG")
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
+agent_id = "0XxKc0000005CBsKAM"
 
 agentforce = Agentforce()
 agentforce.authenticate(
-    salesforce_org="storm-f10cefd8484239.my.salesforce.com",
-    client_id="3MVG9iHJIKsgQcWIBObb7wP9WrrYRH9DmV5WJECvsl8HtiofTx9YLIYbAzFgz62EvHKcJk_URvnvBb9ac6uw2",
-    client_secret="E1584074AC9B438DDBD4789F5BC9B133362D5AFE1963BED96E7CF1CB8BD680DB"
+    salesforce_org=salesforce_org,
+    client_id=client_id,
+    client_secret=client_secret
 )
 
 # Access the stored values
 # print(agentforce.access_token)
 print(agentforce.instance_url)
 
-session = agentforce.start_session(agent_id="0XxKc0000005CBsKAM")
+session = agentforce.start_session(agent_id=agent_id)
 print(session.sessionId)
 print(session.messages[0].message)
 
